@@ -31,5 +31,10 @@ class JpashopApplicationTests {
 		Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
 		Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
 		Assertions.assertThat(findMember).isEqualTo(member); // 같은 트랜잭션 안에서 영속성컨텍스트에서 식별이 같으면 같음
+
+		// 배포
+		// 1. ./gradlew clean build
+		// 2. java -jar jpashop-0.0.1-SNAPSHOT.jar
+
 	}
 }
