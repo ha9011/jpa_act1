@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jpabook.jpashop.JpaEnum.DeliveryStatus;
 import lombok.Getter;
@@ -16,6 +17,7 @@ public class Delivery {
     private Long id;
 
     @OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Order order;
 
     @Embedded
