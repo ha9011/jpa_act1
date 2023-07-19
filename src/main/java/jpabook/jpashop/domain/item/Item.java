@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain.item;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jpabook.jpashop.domain.Category;
 import jpabook.jpashop.domain.exception.NotEnoughStockException;
@@ -22,6 +23,7 @@ public abstract class Item {
     private Long id;
 
     @ManyToMany(mappedBy = "items" )
+    @JsonIgnore
     private List<Category> items = new ArrayList<>();
 
     private String name;

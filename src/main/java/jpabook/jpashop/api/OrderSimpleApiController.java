@@ -1,4 +1,4 @@
-package jpabook.jpashop.controller;
+package jpabook.jpashop.api;
 
 import jpabook.jpashop.JpaEnum.OrderStatus;
 import jpabook.jpashop.domain.Address;
